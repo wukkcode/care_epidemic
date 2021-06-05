@@ -1,0 +1,347 @@
+* {
+    transition: all 0.7s ease 0s;
+}
+
+body {
+    background-color: #f7f8fa;
+}
+
+.all {
+    margin: 10px 20px 0;
+}
+
+/* 头部样式 */
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.header .theme-switcher {
+    position: relative;
+    display: flex;
+    height: 24px;
+    width: 44px;
+    background-color: #e0e0e0;
+    border-radius: 22px;
+    align-items: center;
+    transition: all 0.7s ease 0s;
+}
+
+.header .theme-switcher .theme-circle {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #555555;
+    transition: all 0.7s ease 0s;
+    left: 0px;
+}
+
+/* slogan样式 */
+
+.slogan {
+    font-size: 25px;
+    text-align: center;
+}
+
+/* 内容样式 */
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content .news-choice {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 20px;
+}
+
+.content .news-choice li {
+    cursor: pointer;
+}
+
+.content .news-content {
+    margin-top: 30px;
+    width: 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+    /* min-height: 50%; */
+}
+
+.content .news-content .update {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4e80ed;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* 新闻样式 */
+
+.content .news-content {
+    position: relative;
+}
+
+.content .news-content .news li {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content .news-content .news li h2 span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 40px;
+    background-color: #4e80ed;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.content .news-content .news li h2 a:hover {
+    color: #4e80ed;
+}
+
+.content .news-content .news li * {
+    margin-bottom: 5px;
+}
+
+.content .news-content .news li p {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #999999;
+}
+
+.content .news-content .news li p:nth-child(3) {
+    font-size: 12px;
+    color: #4e80ed;
+    margin-top: 10px;
+}
+
+/* 谣言样式 */
+
+.content .news-content .rumors {
+    display: none;
+}
+
+.content .news-content .rumors li {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content .news-content .rumors li * {
+    margin-bottom: 5px;
+}
+
+.content .news-content .rumors li h2 {}
+
+.content .news-content .rumors li h2 span {
+    display: inline-block;
+    width: 40px;
+    background-color: #55bb8a;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.content .news-content .rumors li p {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #999999;
+}
+
+.content .news-content .rumors li p:nth-child(3) {
+    color: #55bb8a;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 地图样式 */
+
+.content .news-content .map {
+    width: 100%;
+    height: 480px;
+    display: block;
+}
+
+/* 疫情提示 */
+
+.content .news-content .epidemic-tips {
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    top: 0px;
+    right: -160px;
+    z-index: 5;
+    display: block;
+}
+
+.content .news-content .epidemic-tips li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 10px;
+    border: 2px solid #ffffff;
+}
+
+.content .news-content .epidemic-tips li .increment, .number {
+    margin-bottom: 5px;
+}
+
+.content .news-content .epidemic-tips li .area {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    color: #4169e2;
+    padding: 2px 5px;
+    background-color: #e6edff;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.content .news-content .epidemic-tips li .title {
+    color: #666;
+}
+
+.content .news-content .epidemic-tips li:nth-child(1) {
+    background-color: #fff8f8;
+}
+
+.content .news-content .epidemic-tips li:nth-child(1) .number {
+    color: #e61c1d;
+}
+
+.content .news-content .epidemic-tips li:nth-child(2) {
+    background-color: #fff4f4;
+}
+
+.content .news-content .epidemic-tips li:nth-child(2) .number {
+    color: #be2121;
+}
+
+.content .news-content .epidemic-tips li:nth-child(3) {
+    background-color: #f1f8f4;
+}
+
+.content .news-content .epidemic-tips li:nth-child(3) .number {
+    color: #178b50;
+}
+
+.content .news-content .epidemic-tips li:nth-child(4) {
+    background-color: #f3f6f8;
+}
+
+.content .news-content .epidemic-tips li:nth-child(4) .number {
+    color: #4e5a65;
+}
+
+/* 时间和天气 */
+
+.content .news-content .date-weather {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 120px;
+    top: 0px;
+    left: -130px;
+    border: 2px solid #fff;
+    background-color: #e6edff;
+    padding: 10px 0;
+    color: #4e80ed;
+    border-radius: 4px;
+}
+
+.content .news-content .date-weather .about-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.content .news-content .date-weather .about-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .news-content .date-weather .today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -22px;
+    width: 40px;
+    height: 25px;
+    background-color: #e6edff;
+    color: #4e80ed;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid #fff;
+    border-bottom: none;
+    padding: 5px;
+}
+
+/* 关于此项目 */
+
+.content .news-content .about-this {
+    display: none;
+    height: 480px;
+}
+
+.content .news-content .about-this * {
+    margin-bottom: 10px;
+}
+
+.content .news-content .about-this h3 {
+    font-size: 20px;
+}
+
+.content .news-content .about-this p {
+    font-size: 16px;
+}
+
+.content .news-content .about-this a {
+    color: #7980ed;
+}
